@@ -53,6 +53,39 @@ table {
 /* ---------- Small Media First (414px) ---------- */
 
 
+/* ----- Global ----- */
+
+body {
+    margin: 0 auto;
+    background-color: antiquewhite;
+    max-width: 414px;
+}
+
+
+/* ----- Header ----- */
+
+header {
+    height: 0px;
+}
+
+/* ----- Main ----- */
+
+main {
+    width: 414px;
+    margin: 0 auto;
+}
+
+h1 {
+    visibility: hidden;
+}
+
+/* --- * --- */
+
+/* --- * --- */
+
+/* --- * --- */
+
+/* ----- Footer ----- */
 
 
 /* ---------- Medium Media (768px) ---------- */
