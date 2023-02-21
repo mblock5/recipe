@@ -10,26 +10,23 @@
 <body>
     
 
-    <header>
-        <h1>Good Eats- Street Tacos</h1>
-    </header>
 
 
     <main>
 
-        <section>
-            <h2>Street Tacos</h2>
-            <ul>
-                <li><a href="#">Save  (save svg)</a></li>
-                <li><a href="#">Share (share svg)</a></li>
-                <li><a href="#">Print (print svg)</a></li>
-                <li><a href="#">Jump to Recipe (jump svg)</a></li>
-            </ul> 
-            <img src="images/street-tacos.png" alt="">
+        <header>
+            <h1 id="title">Street Tacos</h1>
+            <menu>
+                <li><button id="save">Save  (save svg)</button></li>
+                <li><button id="share">Share (share svg)</button></li>
+                <li><button id="print">Print (print svg)</button></li>
+                <li><button id="jump">Jump to Recipe (jump svg)</button></li>
+            </menu> 
+            <img src="images/street-tacos.png" alt="" id="taco">
             <p>Street tacos are delicious, amazing, and oh so mouthwatering! Bite into tender steak, zesty lime flavor with a hint of spice and add on tomatoes, avocado, and onions for a savory bite you are going to love!
             <br> 
             These street tacos are completely jam-packed with flavor and they are so easy to make. I love how the meat is so tender and juicy and only takes an hour to marinate! If you absolutely love tacos like me, try out these other amazing taco recipes! These taco-stuffed avocados, Baja fish tacos, and ground beef tacos will not disappoint!!</p>
-        </section>
+        </header>
 
         <section>
             <h2>Details</h2>
@@ -119,8 +116,10 @@
         </aside>
         
         
-        <section>
+        <section id="navigation">
             <h4>Main Navigation (hamburger svg)</h4>
+            <input type="checkbox" id="dropdown"/>
+            <label for="dropdown"><span></span></label> 
             <nav>
                 <ul>
                     <li><a href="#">Home (logo svg)</a></li>
