@@ -187,8 +187,22 @@ nav {
     margin-left: 3px;
 }
 
+/* Search Form */
+
 form {
     position: absolute;
+    top: 115px;
+    left: 90px;
+}
+
+label[for="site-search"] p {
+    display: none;
+}
+
+input[type="search"] {
+    width: 100px;
+    height: 50px;
+    border: 2px solid #EB5428;
 }
 
 /* Nav Menu */
