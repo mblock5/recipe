@@ -62,16 +62,14 @@ body {
     max-width: 414px;
 }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
-
 a {
     text-decoration: none;
 }
 
-
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
 
 /* ----- Header ----- */
 
@@ -96,8 +94,9 @@ menu {
 /* ----- Main ----- */
 
 main {
-    width: 414px;
+    min-width: 414px;
     margin: 0 auto;
+    display: grid;
 }
 
 h2 {
@@ -105,23 +104,160 @@ h2 {
     font-size: 30px;
 }
 
+dt {
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+dd {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 16px;
+}
+
+
+
+/* --- Details --- */
+
+/* --- Ingredients --- */
+
+/* --- Directions --- */
+
+/* --- Side Dishes --- */
+
 h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 25px;
 }
 
-
-
-
-/* --- * --- */
-
-/* --- * --- */
-
 /* --- Navigation --- */
 
-#nav {
-    
+nav {
+    width: 414px;
 }
+
+#nav {
+    width: 414px;
+    display: grid;
+    grid-row-start: 1;
+}
+
+#nav_reposition {
+    display: grid;
+    grid-row-start: 2;
+}
+
+
+#nav_title {
+    display: inline-block;
+    font-size: 0px;
+    background-color: #EB5428;
+    width: 235px;
+    height: 95px;
+}
+
+#nav_title svg {
+    position: relative;
+    top: 12px;
+    left: 25%;
+}
+
+/* Nav Menu */
+
+h4 {
+    visibility: hidden;
+    height: 0px;
+}
+
+span p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+nav img {
+    visibility: hidden;
+    height: 0px;
+}
+
+label[for="dropdown_menu"] {
+    padding: 16px 18px 16px 36px;
+    background-color: #FFFFFF;
+}
+
+
+
+/* JS Fiddle example: 
+https://jsfiddle.net/1fzgah3n/ 
+
+
+Menu Code for Mobile First Style (minus the bits you know how to do): */
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+}
+
+label span {
+    display: block;
+    position: relative;
+    transition: background-color .2s ease-out;
+    left: -20%;
+
+}
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+/*
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+} */
 
 /* ----- Footer ----- */
 
