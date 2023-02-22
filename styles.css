@@ -133,7 +133,9 @@ h3 {
 /* --- Navigation --- */
 
 nav {
-    width: 414px;
+    display: grid;
+    grid-row-start: 1;
+    position: sticky;
 }
 
 #nav {
@@ -149,18 +151,27 @@ nav {
 
 
 #nav_title {
-    display: inline-block;
-    font-size: 0px;
-    background-color: #EB5428;
+    position: absolute;
     width: 235px;
     height: 95px;
+    top: 0px;
+    left: 23%;
+    font-size: 0px;
+    background-color: #EB5428;
 }
 
 #nav_title svg {
     position: relative;
     top: 12px;
-    left: 25%;
+    left: 32%;
 }
+
+#nav_signup {
+    position: absolute;
+    display: inline-block;
+    grid-column-start: 4;
+}
+
 
 /* Nav Menu */
 
@@ -181,7 +192,7 @@ nav img {
 }
 
 label[for="dropdown_menu"] {
-    padding: 16px 18px 16px 36px;
+    padding: 16px 17px 16px 36px;
     background-color: #FFFFFF;
 }
 
@@ -201,6 +212,7 @@ ul {
 label {
     cursor: pointer;
     display: inline-block;
+    width: 45px;
     position: relative;
     user-select: none;
 }
