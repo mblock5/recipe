@@ -60,6 +60,7 @@ body {
     margin: 0 auto;
     background-color: rgba(122, 191, 191, 0.5);
     max-width: 414px;
+    color: #0D0D0D;
 }
 
 a {
@@ -115,6 +116,9 @@ dd {
     font-size: 16px;
 }
 
+#title {
+    margin-top: 124px;
+}
 
 
 /* --- Details --- */
@@ -163,15 +167,29 @@ nav {
 #nav_title svg {
     position: relative;
     top: 12px;
-    left: 32%;
+    left: 36%;
 }
 
 #nav_signup {
     position: absolute;
-    display: inline-block;
-    grid-column-start: 4;
+    top: 0px;
+    left: 80%;
+    background-color: #FFFFFF;
+    padding: 16px 18px;
 }
 
+#nav_signup p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+#signup_icon {
+    margin-left: 3px;
+}
+
+form {
+    position: absolute;
+}
 
 /* Nav Menu */
 
@@ -209,7 +227,7 @@ ul {
     max-height: 0;
     transition: max-height .2s ease-out;
 }
-label {
+label[for="dropdown_menu"] {
     cursor: pointer;
     display: inline-block;
     width: 45px;
@@ -217,14 +235,14 @@ label {
     user-select: none;
 }
 
-label span {
+label[for="dropdown_menu"] span {
     display: block;
     position: relative;
     transition: background-color .2s ease-out;
     left: -20%;
 
 }
-label span:before, label span:after {
+label[for="dropdown_menu"] span:before, label[for="dropdown_menu"] span:after {
     content: '';
     display: block;
     height: 100%;
@@ -232,28 +250,23 @@ label span:before, label span:after {
     transition: all .2s ease-out;
     width: 100%;
 }
-label span:before {
+label[for="dropdown_menu"] span:before {
     top: 5px;
 }
-label span:after {
+label[for="dropdown_menu"] span:after {
     top: -5px;
 }
-input {
+input[id="dropdown_menu"]  {
     display: none;
 }
-input:checked ~ ul {
+input[id="dropdown_menu"]:checked ~ ul {
     max-height: 500px;
 }
-input:checked ~ label span {
+input[id="dropdown_menu"]:checked ~ label span {
     background: transparent;
 }
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
-}
-input:checked ~ label span:after {
-    transform: rotate(45deg);
-}
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+
+input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:before, input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:after {
     top: 0;
 }
 
