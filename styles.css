@@ -61,6 +61,7 @@ body {
     background-color: rgba(122, 191, 191, 0.5);
     max-width: 414px;
     color: #0D0D0D;
+    display: grid;
 }
 
 a {
@@ -81,15 +82,7 @@ header {
 h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
-}
-
-menu {
-    list-style: none;
-}
-
-#taco {
-    width: 50%;
-    height: 50%;
+    text-align: center;
 }
 
 /* ----- Main ----- */
@@ -98,11 +91,15 @@ main {
     min-width: 414px;
     margin: 0 auto;
     display: grid;
+    background-color: #F2F2F2;
 }
 
 h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 30px;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 16px;
 }
 
 dt {
@@ -117,13 +114,100 @@ dd {
 }
 
 #title {
-    margin-top: 124px;
+    margin-top: 38px;
 }
 
+/* Save, Share, Print, Jump Buttons */
+
+menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    list-style: none;
+    height: 95px;
+}
+
+menu p {
+    position: relative;
+    top: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: #EB5428;
+    grid-row-start: 1;
+}
+
+#save, #share, #print, #jump {
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#save {
+    grid-column-start: 1;
+    margin-left: 32px;
+}
+
+#share {
+    grid-column-start: 2;
+    margin-left: 28px;
+}
+
+#print {
+    grid-column-start: 3;
+    margin-left: 24px;
+}
+
+#jump {
+    grid-column-start: 4;
+    margin-right: 2px;
+}
+
+/* - */
+
+#taco {
+    width: 414px;
+    height: auto;
+}
+
+#intro_p {
+    margin: 8px 8px 8px 8px;
+    line-height: 24px;
+}
 
 /* --- Details --- */
 
+.new_line {
+    display: flex;
+    line-height: 18px;
+}
+
+span.hidden {
+    font-size: 0px;
+}
+
+#details dl {
+    margin: 4px 0px 2px 8px;
+}
+
+#details dt {
+    margin-right: 16px;
+}
+
+
 /* --- Ingredients --- */
+
+#ingredients ul {
+    position: relative;
+    left: 24px;
+    list-style: square;
+}
+
+#ingredients li {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+}
+
 
 /* --- Directions --- */
 
@@ -142,18 +226,6 @@ nav {
     position: sticky;
 }
 
-#nav {
-    width: 414px;
-    display: grid;
-    grid-row-start: 1;
-}
-
-#nav_reposition {
-    display: grid;
-    grid-row-start: 2;
-}
-
-
 #nav_title {
     position: absolute;
     width: 235px;
@@ -167,7 +239,6 @@ nav {
 #nav_title svg {
     position: relative;
     top: 12px;
-    left: 36%;
 }
 
 #nav_signup {
@@ -187,22 +258,56 @@ nav {
     margin-left: 3px;
 }
 
+.nav_links {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #EB5428;
+}
+
+nav ul {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+nav li {
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
 /* Search Form */
 
 form {
-    position: absolute;
-    top: 115px;
-    left: 90px;
-}
-
-label[for="site-search"] p {
-    display: none;
+    display: inline-flex;
+    position: relative;
+    top: 16px;
+    left: 83px;
+    margin-top: 16px;
 }
 
 input[type="search"] {
-    width: 100px;
+    position: relative;
+    right: 140px;
+    width: 258px;
     height: 50px;
     border: 2px solid #EB5428;
+}
+
+#search_button {
+    position: relative;
+    top: -16px;
+    left: 220px;
+    font-size: 0px;
+    width: 60px;
+    height: 50px;
+    background-color: #EB5428;
+    border: none;
+    cursor: pointer;
+}
+
+#search_icon {
+    position: relative;
+    top: 4px;
+    left: 165px;
+    cursor: pointer;
 }
 
 /* Nav Menu */
@@ -236,7 +341,7 @@ https://jsfiddle.net/1fzgah3n/
 
 Menu Code for Mobile First Style (minus the bits you know how to do): */
 
-ul {
+nav ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
@@ -276,7 +381,7 @@ input[id="dropdown_menu"]  {
 input[id="dropdown_menu"]:checked ~ ul {
     max-height: 500px;
 }
-input[id="dropdown_menu"]:checked ~ label span {
+input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"] span {
     background: transparent;
 }
 
