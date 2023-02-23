@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
+ul {
     list-style: none;
 }
 blockquote, q {
@@ -83,6 +83,7 @@ h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
     text-align: center;
+    margin-top: 100px;
 }
 
 /* ----- Main ----- */
@@ -111,10 +112,6 @@ dt {
 dd {
     font-family: 'Monserrat', sans-serif;
     font-size: 16px;
-}
-
-#title {
-    margin-top: 38px;
 }
 
 /* Save, Share, Print, Jump Buttons */
@@ -211,11 +208,35 @@ span.hidden {
 
 /* --- Directions --- */
 
+ol {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px 8px 0px 28px;
+}
+
+ol li {
+    margin: 16px 0px;
+}
+
 /* --- Side Dishes --- */
 
 h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 25px;
+}
+
+#side_dishes {
+    background-color: #7ABFBF;
+}
+
+#side_dishes img {
+    width: 20%;
+    height: auto;
+}
+
+#rice {
+    display: flex;
 }
 
 /* --- Navigation --- */
@@ -225,6 +246,28 @@ nav {
     grid-row-start: 1;
     position: sticky;
 }
+
+#navigation {
+    position: relative;
+    top: -2539px;
+    background-color: #F2F2F2;
+}
+
+#nav_reposition_header {
+    position: relative;
+    top: 95px;
+}
+
+#nav_reposition_main {
+    position: relative;
+    top: 95px;
+}
+
+#nav_reposition_footer {
+    position: relative;
+    top: 95px;
+}
+
 
 #nav_title {
     position: absolute;
@@ -277,24 +320,23 @@ nav li {
 
 form {
     display: inline-flex;
-    position: relative;
-    top: 16px;
-    left: 83px;
+    position: absolute;
+    top: 106px;
+    left: 115px;
     margin-top: 16px;
 }
 
 input[type="search"] {
     position: relative;
     right: 140px;
-    width: 258px;
+    width: 260px;
     height: 50px;
     border: 2px solid #EB5428;
 }
 
 #search_button {
     position: relative;
-    top: -16px;
-    left: 220px;
+    left: 180px;
     font-size: 0px;
     width: 60px;
     height: 50px;
@@ -305,8 +347,8 @@ input[type="search"] {
 
 #search_icon {
     position: relative;
-    top: 4px;
-    left: 165px;
+    top: -45px;
+    left: 190px;
     cursor: pointer;
 }
 
@@ -334,7 +376,6 @@ label[for="dropdown_menu"] {
 }
 
 
-
 /* JS Fiddle example: 
 https://jsfiddle.net/1fzgah3n/ 
 
@@ -345,7 +386,9 @@ nav ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
+    z-index: 3;
 }
+
 label[for="dropdown_menu"] {
     cursor: pointer;
     display: inline-block;
