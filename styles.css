@@ -848,16 +848,31 @@ small {
         overflow: visible;
         max-height: fit-content;
     }
+ 
+    nav li:nth-child(n+2):nth-child(-n+8) {
+        position: relative;
+        top: 90px;
+        height: 100px;
+        padding-bottom: 2px;
+    }
+
+    nav li:nth-child(n+2):nth-child(-n+8):hover {
+        background-color: #EB5428;
+    }
+
+    .nav_links {
+        position: relative;
+        top: 70px;
+    }
+
+    .nav_links:hover {
+        color: #FFFFFF;
+    }
 
     #nav_title {
         width: 90px;
         height: 90px;
         left: 0px;
-    }
-
-    .nav_links {
-        position: relative;
-        top: 160px;
     }
 
     #nav_signup {
