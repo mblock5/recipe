@@ -133,6 +133,11 @@ menu span {
     grid-row-start: 1;
 }
 
+menu span:hover {
+    color: #F2F2F2;
+    background-color: #EB5428;
+}
+
 #save, #share, #print, #jump {
     border: transparent;
     background-color: transparent;
@@ -350,6 +355,7 @@ nav {
     position: relative;
     top: -2950px;
     background-color: #F2F2F2;
+    z-index: 4;
 }
 
 #nav_reposition_header {
@@ -482,8 +488,7 @@ span span {
 }
 
 nav img {
-    visibility: hidden;
-    height: 0px;
+    display: none;
 }
 
 label[for="dropdown_menu"] {
@@ -677,7 +682,252 @@ small {
 
 /* ---------- Medium Media (768px) ---------- */
 
+@media screen and (min-width: 768px) {
 
+    /* ----- Global ----- */
+
+    body {
+        max-width: 768px;
+    }
+
+
+    /* ----- Header ----- */
+
+    header {
+        max-width: 768px;
+    }
+
+    h1 {
+        text-align: left;
+        margin: 24px 0px 24px 16px;
+    }
+
+    #taco {
+
+        width: 768px;
+    }
+
+    /* Save, Share, Print, Jump Buttons */
+
+    menu {
+        position: absolute;
+        width: 768px;
+        background-color: rgba(242, 242, 242, 0.75);
+        height: 95px;
+    }
+
+    #save, #share, #print, #jump {
+        border: transparent;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    #save svg, #share svg, #print svg, #jump svg {
+        position: relative;
+        top: 8px;
+    }
+
+    #save span, #share span, #print span, #jump span {
+        position: relative;
+        top: 24px;
+    }
+
+
+    #save span {
+        position: relative;
+        left: 36px;
+    }
+
+    #share span {
+        position: relative;
+        left: 40px;
+    }
+
+    #print {
+        left: 25px;
+    }
+
+    #print span {
+        left: 38px;
+    }
+
+    #jump span {
+        position: relative;
+        left: 65px;
+    }
+
+    /* ----- Main ----- */
+
+    main {
+        max-width: 768px;
+    }
+
+    .new_line {
+        justify-content: center;
+    }
+
+    #medium_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #ingredients {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #directions {
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
+    #sides {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #rice {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    #salsa {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    #guacamole {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    #tortillas {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    /* Navigation */
+
+    #navigation {
+        position: relative;
+        top: -2620px;
+        background-color: #F2F2F2;
+        z-index: 4;
+    }
+
+    #nav_reposition_header {
+        top: 200px;
+    }
+
+    #nav_reposition_main {
+        top: 200px;
+    }
+
+    #nav_reposition_footer {
+        top: 0px;
+    }
+
+    label[for="dropdown_menu"] {
+        display: none;
+    }
+
+    nav {
+        height: 200px;
+    }
+
+    nav img {
+        position: relative;
+        top: -85px;
+        display: initial;
+        width: 60px;
+    }
+
+    nav ul {
+        display: flex;
+        overflow: visible;
+        max-height: fit-content;
+    }
+
+    #nav_title {
+        width: 90px;
+        height: 90px;
+        left: 0px;
+    }
+
+    .nav_links {
+        position: relative;
+        top: 160px;
+    }
+
+    #nav_signup {
+        display: grid;
+        position: absolute;
+        left: 678px;
+        width: 90px;
+        height: 90px;
+        padding: 0px;
+        z-index: 4;
+    }
+
+    #nav_signup svg {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        grid-row-start: 1;
+    }
+
+    #nav_signup span {
+        grid-row-start: 2;
+    }
+
+    form {
+        top: 0px;
+        left: 370px;
+        z-index: 3;
+    }
+
+    #search-button {
+        top: -16px;
+        left: 222px;
+    }
+
+    #search_icon {
+        top: 4px;
+        left: 168px;
+    }
+
+    /* Connect */
+
+    #connect ul {
+        display: flex;
+    }
+
+    #connect li {
+        position: relative;
+        top: -90px;
+        left: 390px;
+        margin: 0px 16px;
+        z-index: 2;
+    }
+
+    /* ----- Footer ----- */
+
+    footer {
+        max-width: 768px;
+        padding-bottom: 8px;
+    }
+
+    footer img {
+        top: 36px;
+    }
+
+    small {
+        top: 60px;
+        left: -174px;
+    }
+
+}
 
 
 /* ---------- Large Media (1280px) ---------- */
