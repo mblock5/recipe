@@ -124,7 +124,7 @@ menu {
     height: 95px;
 }
 
-menu p {
+menu span {
     position: relative;
     top: 60px;
     font-family: 'Bebas Neue', sans-serif;
@@ -146,15 +146,19 @@ menu p {
 
 #share {
     grid-column-start: 2;
-    margin-left: 28px;
+    margin-left: 22px;
 }
 
 #print {
+    position: relative;
+    left: -10px;
     grid-column-start: 3;
-    margin-left: 24px;
+    margin-left: 15px;
 }
 
 #jump {
+    position: relative;
+    left: -4px;
     grid-column-start: 4;
     margin-right: 2px;
 }
@@ -228,7 +232,6 @@ h3 {
 
 #side_dishes {
     background-color: #7ABFBF;
-    margin-bottom: 24px;
 }
 
 #side_dishes img{
@@ -236,7 +239,15 @@ h3 {
     margin-left: 8px;
 }
 
-#rice {
+#side_dishes a {
+    color: #0D0D0D;
+}
+
+#side_dishes a:hover {
+    background-color: #EB5428;
+}
+
+#rice a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -252,7 +263,7 @@ h3 {
     grid-column-end: 4;
 }
 
-#salsa {
+#salsa a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -268,7 +279,7 @@ h3 {
     grid-column-end: 4;
 }
 
-#guacamole {
+#guacamole a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -284,7 +295,7 @@ h3 {
     grid-column-end: 4;
 }
 
-#tortillas {
+#tortillas a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -332,11 +343,12 @@ nav {
     display: grid;
     grid-row-start: 1;
     position: sticky;
+    box-shadow: 0px 2px 5px rgba(5, 5, 5, 0.5)
 }
 
 #navigation {
     position: relative;
-    top: -2539px;
+    top: -2950px;
     background-color: #F2F2F2;
 }
 
@@ -358,7 +370,7 @@ nav {
 
 #nav_title {
     position: absolute;
-    width: 235px;
+    width: 236px;
     height: 95px;
     top: 0px;
     left: 23%;
@@ -368,7 +380,12 @@ nav {
 
 #nav_title svg {
     position: relative;
-    top: 12px;
+    top: 16px;
+}
+
+svg[id="signup_icon"]:hover {
+    stroke: #FFFFFF;
+    transition: stroke .2s ease-in-out;
 }
 
 #nav_signup {
@@ -379,9 +396,22 @@ nav {
     padding: 16px 18px;
 }
 
-#nav_signup p {
+#nav_signup:hover {
+    background-color: #EB5428;
+    transition: background-color .2s ease-in-out;
+}
+
+#nav_signup span {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
+    color: #0D0D0D;
+}
+
+#nav_signup span:hover {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    transition: color .2s ease-in-out;
 }
 
 #signup_icon {
@@ -421,7 +451,7 @@ input[type="search"] {
     border: 2px solid #EB5428;
 }
 
-#search_button {
+#search-button {
     position: relative;
     left: 180px;
     font-size: 0px;
@@ -445,7 +475,7 @@ h4 {
     display: none;
 }
 
-span p {
+span span {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     margin-left: 3px;
@@ -459,6 +489,11 @@ nav img {
 label[for="dropdown_menu"] {
     padding: 16px 17px 16px 36px;
     background-color: #FFFFFF;
+}
+
+#menu_clickable_content {
+    position: relative;
+    left: -8px;
 }
 
 
@@ -485,8 +520,6 @@ label[for="dropdown_menu"] {
 
 label[for="dropdown_menu"] span {
     display: block;
-    position: relative;
-    transition: background-color .2s ease-out;
     left: -20%;
 
 }
@@ -541,7 +574,7 @@ input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:
 
 #connect ul {
     position: relative;
-    top: -90px;
+    top: -95px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: #FFFFFF;
@@ -553,12 +586,17 @@ input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:
     left: 24px;
 }
 
-#connect p {
+#connect span {
     position: relative;
     top: 64px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     color: #EB5428;
+}
+
+#connect span:hover {
+    background-color: #EB5428;
+    color: #FFFFFF;
 }
 
 #connect svg {
@@ -571,9 +609,10 @@ input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:
     grid-column-start: 1;
 }
 
-#facebook p {
+#facebook span {
     position: relative;
     left: 4px;
+    width: 65px;
 }
 
 #instagram {
@@ -581,14 +620,19 @@ input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:
     grid-column-start: 2;
 }
 
+#instagram span {
+    width: 70px;
+}
+
 #youtube {
     display: grid;
     grid-column-start: 3;
 }
 
-#youtube p {
+#youtube span {
     position: relative;
     left: 6px;
+    width: 55px;
 }
 
 #tiktok {
@@ -596,10 +640,10 @@ input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:
     grid-column-start: 4;
 }
 
-#tiktok p {
+#tiktok span {
     position: relative;
     left: 9px;
-    width: 55px;
+    width: 50px;
 }
 
 /* ----- Footer ----- */
@@ -610,6 +654,7 @@ footer {
     background-color: #FFFFFF;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
+    height: 330px;
 }
 
 footer img {
@@ -627,6 +672,7 @@ small {
     display: grid;
     grid-row-start: 2;
     text-align: center;
+    height: 46px;
 }
 
 /* ---------- Medium Media (768px) ---------- */
