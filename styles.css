@@ -77,6 +77,7 @@ p {
 
 header {
     background-color: #F2F2F2;
+    max-width: 414px;
 }
 
 h1 {
@@ -89,10 +90,9 @@ h1 {
 /* ----- Main ----- */
 
 main {
-    min-width: 414px;
-    margin: 0 auto;
     display: grid;
     background-color: #F2F2F2;
+    max-width: 414px;
 }
 
 h2 {
@@ -228,16 +228,103 @@ h3 {
 
 #side_dishes {
     background-color: #7ABFBF;
+    margin-bottom: 24px;
 }
 
-#side_dishes img {
-    width: 20%;
-    height: auto;
+#side_dishes img{
+    width: 90px;
+    margin-left: 8px;
 }
 
 #rice {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+#rice img {
+    display: grid;
+    grid-column-start: 1;
+}
+
+#rice p, #rice h3, #rice dl {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#salsa {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#salsa img {
+    display: grid;
+    grid-column-start: 1;
+}
+
+#salsa p, #salsa h3, #salsa dl {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#guacamole {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#guacamole img {
+    display: grid;
+    grid-column-start: 1;
+}
+
+#guacamole p, #guacamole h3, #guacamole dl {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#tortillas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#tortillas img {
+    display: grid;
+    grid-column-start: 1;
+}
+
+#tortillas p, #tortillas h3, #tortillas dl {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+#side_dishes h3 {
+    position: relative;
+    top: 24px;
+    left: 20px;
+}
+
+#side_dishes p {
+    position: relative;
+    top: 42px;
+    left: 20px;
+    width: 250px;
+}
+
+#side_dishes dt {
+    position: relative;
+    top: -22px;
+    left: 20px;
+}
+
+#side_dishes dd {
+    position: relative;
+    top: -18px;
+    left: 16px;
+}
+
 
 /* --- Navigation --- */
 
@@ -445,6 +532,36 @@ input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:
         display: none;
     }
 } */
+
+/* --- Connect --- */
+
+#connect ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #EB5428;
+}
+
+#facebook {
+    display: grid;
+    grid-column-start: 1;
+}
+
+#instagram {
+    display: grid;
+    grid-column-start: 2;
+}
+
+#youtube {
+    display: grid;
+    grid-column-start: 3;
+}
+
+#tiktok {
+    display: grid;
+    grid-column-start: 4;
+}
 
 /* ----- Footer ----- */
 
