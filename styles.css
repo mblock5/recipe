@@ -946,3 +946,329 @@ small {
 
 
 /* ---------- Large Media (1280px) ---------- */
+
+@media screen and (min-width: 1280px) {
+
+     /* ----- Global ----- */
+
+     body {
+        max-width: 1280px;
+    }
+
+
+    /* ----- Header ----- */
+
+    header {
+        max-width: 1280px;
+    }
+
+    h1 {
+            text-align: center;
+            margin: 24px 0px;;
+        }
+
+    #large_grid {
+        display: grid;
+    }
+
+   header p {
+        grid-column-start: 3;
+   }
+
+   #intro_p {
+    line-height: 30px;
+   }
+
+    #taco {
+        grid-column-start: 2;
+        width:500px;
+    }
+
+    /* Save, Share, Print, Jump Buttons */
+
+    menu {
+        display: block;
+        position: relative;
+        width: 125px;
+        height: 719px;
+        padding-top: 27px;
+        background-color: #FFFFFF;
+        border: 2px solid #EB5428;
+    }
+
+    #save {
+        position: relative;
+        left: -24px;
+    }
+
+    #share {
+        position: relative;
+        top: 25px;
+        left: -22px;
+    }
+
+    #print {
+        position: relative;
+        top: 50px;
+        left: -12px;
+    }
+
+    #jump {
+        position: relative;
+        top: 80px;
+        left: -24px;
+    }
+
+    #jump svg {
+        position: relative;
+        left: 28px;
+    }
+
+    #jump span span {
+        display: none;
+    }
+
+
+
+    /* ----- Main ----- */
+
+    main {
+        max-width: 1280px;
+    }
+
+    .new_line {
+        display: inline-block;
+        text-align: center;
+    }
+
+    #details {
+        background-color: #0D0D0D;
+    }
+
+    #details h2 {
+        color: #7ABFBF;
+    }
+
+    #details dl {
+        display: grid;
+        color: #7ABFBF;
+    }
+
+    #details dd {
+        position: relative;
+        left: -8px;
+        padding-bottom: 4px;
+    }
+
+    .new_line:first-child {
+        grid-column-start: 1;
+    }
+
+    .new_line:nth-child(2) {
+        grid-column-start: 2;
+    }
+
+    .new_line:nth-child(3) {
+        grid-column-start: 3;
+    }
+
+    .new_line:nth-child(4) {
+        grid-column-start: 4;
+    }
+
+    .new_line:last-child {
+        grid-column-start: 5;
+    }
+
+    #sides {
+        display: inline-flex;
+    }
+
+    #sides a {
+        width: 265px;
+        padding: 8px
+    }
+
+    #side_dishes h3 {
+        position: relative;
+        top: 0px;
+    }
+
+    #side_dishes img {
+        width: 248px;
+    }
+
+    #side_dishes p {
+        position: relative;
+        top: 0px;
+    }
+
+    #side_dishes dl {
+        position: relative;
+        top: 0px;
+    }
+
+    #rice, #salsa, #guacamole, #tortillas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 328px;
+        height: 328px;
+    }
+
+    #rice img, #salsa img, #guacamole img, #tortillas img {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    #rice h3, #salsa h3, #guacamole h3, #tortillas h3 {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    #rice p, #salsa p, #guacamole p, #tortillas p {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+
+    #rice dl, #salsa dl, #guacamole dl, #tortillas dl {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+
+    /* Navigation */
+
+    #navigation {
+        position: relative;
+        top: -2800px;
+        background-color: #F2F2F2;
+        z-index: 4;
+    }
+
+    #nav_reposition_header {
+        top: 200px;
+    }
+
+    #nav_reposition_main {
+        top: 200px;
+    }
+
+    #nav_reposition_footer {
+        top: 0px;
+    }
+
+    label[for="dropdown_menu"] {
+        display: none;
+    }
+
+    nav {
+        height: 200px;
+    }
+
+    nav img {
+        position: relative;
+        top: -85px;
+        display: initial;
+        width: 60px;
+    }
+
+    nav ul {
+        display: flex;
+        overflow: visible;
+        max-height: fit-content;
+    }
+ 
+    nav li:nth-child(n+2):nth-child(-n+8) {
+        position: relative;
+        top: 90px;
+        height: 100px;
+        padding-bottom: 2px;
+    }
+
+    nav li:nth-child(n+2):nth-child(-n+8):hover {
+        background-color: #EB5428;
+    }
+
+    .nav_links {
+        position: relative;
+        top: 70px;
+    }
+
+    .nav_links:hover {
+        color: #FFFFFF;
+    }
+
+    #nav_title {
+        width: 90px;
+        height: 90px;
+        left: 0px;
+    }
+
+    #nav_signup {
+        display: grid;
+        position: absolute;
+        left: 678px;
+        width: 90px;
+        height: 90px;
+        padding: 0px;
+        z-index: 4;
+    }
+
+    #nav_signup svg {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        grid-row-start: 1;
+    }
+
+    #nav_signup span {
+        grid-row-start: 2;
+    }
+
+    form {
+        top: 0px;
+        left: 370px;
+        z-index: 3;
+    }
+
+    #search-button {
+        top: -16px;
+        left: 222px;
+    }
+
+    #search_icon {
+        top: 4px;
+        left: 168px;
+    }
+
+    /* Connect 
+
+    #connect ul {
+        display: flex;
+    }
+
+    #connect li {
+        position: relative;
+        top: -90px;
+        left: 390px;
+        margin: 0px 16px;
+        z-index: 2;
+    }
+
+    /* ----- Footer ----- 
+
+    footer {
+        max-width: 768px;
+        padding-bottom: 8px;
+    }
+
+    footer img {
+        top: 36px;
+    }
+
+    small {
+        top: 60px;
+        left: -174px;
+    } */
+
+}
