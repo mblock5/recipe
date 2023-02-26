@@ -556,20 +556,6 @@ input[id="dropdown_menu"]:checked ~ label[for="dropdown_menu"]:not(.steps) span:
     top: 0;
 }
 
-/*
-@media screen and (min-width:834px) {
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    label span, input {
-        display: none;
-    }
-} */
-
 /* --- Connect --- */
 
 #connect {
