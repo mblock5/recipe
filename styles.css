@@ -1014,17 +1014,19 @@ small {
 
     #jump {
         position: relative;
-        top: 80px;
+        top: 60px;
         left: -24px;
+    }
+
+    #jump span {
+        position: relative;
+        top: 70px;
+        left: 26px;
     }
 
     #jump svg {
         position: relative;
         left: 28px;
-    }
-
-    #jump span span {
-        display: none;
     }
 
 
@@ -1159,15 +1161,15 @@ small {
 
     #navigation {
         position: relative;
-        top: -2025px;
+        top: -1925px;
     }
 
     #nav_reposition_header {
-        top: 200px;
+        top: 100px;
     }
 
     #nav_reposition_main {
-        top: 200px;
+        top: 100px;
     }
 
     #nav_reposition_footer {
@@ -1185,7 +1187,7 @@ small {
     nav img {
         position: relative;
         top: -42px;
-        left: 10px;
+        left: -30px;
         width: 50px;
         padding: 0px 24px;
     } 
@@ -1211,6 +1213,12 @@ small {
         position: relative;
         top: 36px;
         left: 32px;
+    }
+
+    .nav_links span {
+        position: relative;
+        top: 32px;
+        left: -30px;
     }
 
     .nav_links:hover {
@@ -1269,7 +1277,7 @@ small {
 
     #connect li {
         position: relative;
-        top: -90px;
+        top: 0px;
         left: 650px;
         margin: 0px 48px;
         z-index: 2;
